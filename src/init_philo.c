@@ -6,7 +6,7 @@
 /*   By: mvalk <mvalk@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/08/15 16:37:18 by mvalk         #+#    #+#                 */
-/*   Updated: 2023/10/24 14:00:24 by mvalk         ########   odam.nl         */
+/*   Updated: 2023/10/24 17:09:27 by mvalk         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,15 @@ int	init_philosophers(int ac, char **av, t_params *s_data)
 {
 	if (ac == 6)
 	{
-		s_data->max_eat = ft_atoi(av[--ac]);
+		s_data->max_eat = ft_atol(av[--ac]);
 		s_data->eat_limit = true;
 		if (s_data->max_eat < 1)
 			return (-1);
 	}
-	s_data->time_to_sleep = ft_atoi(av[--ac]);
-	s_data->time_to_eat = ft_atoi(av[--ac]);
-	s_data->time_to_die = ft_atoi(av[--ac]);
-	s_data->philo_count = ft_atoi(av[--ac]);
+	s_data->time_to_sleep = ft_atol(av[--ac]);
+	s_data->time_to_eat = ft_atol(av[--ac]);
+	s_data->time_to_die = ft_atol(av[--ac]);
+	s_data->philo_count = ft_atol(av[--ac]);
 	if (s_data->time_to_sleep < 1 || s_data->time_to_die < 1)
 		return (-1);
 	if (s_data->max_eat > INT32_MAX || s_data->time_to_sleep > INT32_MAX

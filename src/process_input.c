@@ -6,7 +6,7 @@
 /*   By: mvalk <mvalk@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/27 14:05:26 by mvalk         #+#    #+#                 */
-/*   Updated: 2023/09/07 15:28:55 by mvalk         ########   odam.nl         */
+/*   Updated: 2023/10/24 17:09:40 by mvalk         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static bool	ft_isdigit(char c)
 	return (c >= '0' && c <= '9');
 }
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
 	int		neg;
 	long	number;
@@ -48,7 +48,7 @@ int	check_input_type(char **input)
 	int	i;
 
 	i = 1;
-	if (ft_atoi(input[i]) > 2047)
+	if (ft_atol(input[i]) > 2047)
 		return (1);
 	while (input[i] != NULL)
 	{
@@ -60,6 +60,8 @@ int	check_input_type(char **input)
 			if (!ft_isdigit(input[i][j]))
 				return (1);
 			j++;
+			if (j > 10)
+				return (1);
 		}
 		i++;
 	}
