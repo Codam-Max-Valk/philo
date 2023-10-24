@@ -6,7 +6,7 @@
 /*   By: mvalk <mvalk@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/24 15:24:37 by mvalk         #+#    #+#                 */
-/*   Updated: 2023/10/17 17:51:28 by mvalk         ########   odam.nl         */
+/*   Updated: 2023/10/24 14:05:51 by mvalk         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ size_t					gettime_dif(struct timeval start_time);
 void					*ft_calloc(size_t count, size_t size);
 int32_t					ft_atoi(const char *str);
 bool					set_stop_eat(t_params *s_data);
-int						lock_wrap(t_philo *philo, t_lock e_lock, t_fork side);
+int						lock_fork(t_philo *philo, t_lock e_lock, t_fork side);
 // FUNCTIONS
 
 int						philosophers(t_params *s_data);

@@ -6,13 +6,13 @@
 /*   By: mvalk <mvalk@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/27 13:58:57 by mvalk         #+#    #+#                 */
-/*   Updated: 2023/10/17 17:51:04 by mvalk         ########   odam.nl         */
+/*   Updated: 2023/10/24 14:05:51 by mvalk         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int	lock_wrap(t_philo *philo, t_lock e_lock, t_fork side)
+int	lock_fork(t_philo *philo, t_lock e_lock, t_fork side)
 {
 	if (e_lock == lock)
 		return (pthread_mutex_lock(&philo->s_data->forks[(philo->philo_id
