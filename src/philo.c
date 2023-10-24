@@ -6,7 +6,7 @@
 /*   By: mvalk <mvalk@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/27 13:58:57 by mvalk         #+#    #+#                 */
-/*   Updated: 2023/10/24 14:05:51 by mvalk         ########   odam.nl         */
+/*   Updated: 2023/10/24 16:47:45 by mvalk         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	check_death(t_params *s_data)
 {
 	size_t	i;
 
-	ph_sleep(s_data->time_to_die / 2, NULL);
 	while (true)
 	{
 		i = 0;
