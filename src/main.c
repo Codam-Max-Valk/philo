@@ -6,7 +6,7 @@
 /*   By: mvalk <mvalk@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/07/24 15:24:09 by mvalk         #+#    #+#                 */
-/*   Updated: 2023/10/24 16:57:50 by mvalk         ########   odam.nl         */
+/*   Updated: 2023/10/24 17:02:55 by mvalk         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,10 @@ int	join_philo(t_params *s_data)
 	return (0);
 }
 
-void lk()
-{
-	system("leaks -q philo");
-}
-
 int	main(int ac, char **av)
 {
 	t_params	s_data;
 
-	atexit(lk);
 	if (ac == 5 || ac == 6)
 	{
 		if (check_input_type(av))
